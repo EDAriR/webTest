@@ -3,13 +3,16 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+import auth.login
 
-def creat_tenant():
+
+def creat_tenant(authorization):
     url = "http://localhost:8080/aaa/tenant"
 
+    print(authorization)
     headers = {
         'content-type': 'application/json',
-        'Authorization': 'WEB 6420fb71-3d2a-45e6-a4cd-f953b6b118f3'
+        'Authorization': authorization
     }
 
     body = {
@@ -34,5 +37,5 @@ def creat_tenant():
     print(soup)
     print('+=============================================+')
 
-
+print(auth.getToken)
 creat_tenant()
