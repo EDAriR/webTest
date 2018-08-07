@@ -9,7 +9,7 @@ def create_tenant(authorization):
 
     headers = {
         'content-type': 'application/json',
-        'Authorization': "WEB 4ea25cea-414f-45dc-b48e-dd97df7f2908"
+        'Authorization': "WEB c22ab2ad-2fef-41fe-bf04-5dfde9344b84"
     }
 
     body = {
