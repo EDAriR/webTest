@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 # 新增受測者 [POST /vitals/subject]
 def create_subject(subjectId, subjectName, gender, birthday, unitId, permission):
-    url = "http://localhost:8083/cip/subject"
+    url = "http://localhost:8080/vitals/subject"
 
     headers = {
         'content-type': 'application/json',
@@ -85,11 +85,11 @@ def create_subject(subjectId, subjectName, gender, birthday, unitId, permission)
 # create_subject(subjectId, subjectName, "FEMALE", birthday, unitId, permission)
 
 
-subjectId = "TTABO"
-subjectName = "TTABO"
+subjectId = "systemAdmin"
+subjectName = "systemAdmin"
 birthday = "2018-05-23"
-permission = 'WEB 6f4f8c4d-ec52-4094-b6e9-e72e8f3a9455'
-unitId = "1000000000000"
+permission = 'WEB 51d430df-9841-4846-a29f-7cfce62101a1'
+unitId = "1001401004201"
 
 # subjectId, subjectName, gender, birthday, unitId
 create_subject(subjectId, subjectName, "MALE", birthday, unitId, permission)

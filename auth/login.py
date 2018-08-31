@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 url = "http://localhost:8080/"
+# url = "http://172.17.6.208:8000/"
 # url = "http:///172.17.9.60:8080/aaa"
 api = "aaa"
 headers = {

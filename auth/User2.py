@@ -5,11 +5,11 @@ from bs4 import BeautifulSoup
 
 
 def create_user2(userId, userName, password):
-    url = "http://localhost:8080/aaa/user"
+    url = "http://172.17.9.58:8000/aaa/user"
 
     headers = {
         'content-type': 'application/json',
-        'Authorization': 'WEB a40c9707-7858-4814-ad7d-560d8e66f4ee'
+        'Authorization': 'WEB 4c60fe14-d219-431b-98c3-23aa31084d6e'
     }
 
     body = {
@@ -20,7 +20,7 @@ def create_user2(userId, userName, password):
         "email": userId + "@1qaz2wsx.com",
         "cardIds": [],
         "unitIds": [],
-        "roleIds": ["DEFAULT_USER", "testROLE"],
+        "roleIds": ["DEFAULT_USER"],
         "status": "ENABLED"
     }
 
@@ -36,5 +36,5 @@ def create_user2(userId, userName, password):
     print('+=============================================+')
 
 
-create_user2("n124331915", "n124331915", "1qaz2wsx")
+create_user2("n124331915", "1qaz2wsx", "1qaz2wsx")
 

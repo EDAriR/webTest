@@ -6,10 +6,11 @@ from bs4 import BeautifulSoup
 
 def create_tenant(authorization):
     url = "http://localhost:8080/aaa/tenant"
+    # url = "http://172.17.6.208:8000/aaa/tenant"
 
     headers = {
         'content-type': 'application/json',
-        'Authorization': "WEB c22ab2ad-2fef-41fe-bf04-5dfde9344b84"
+        'Authorization': authorization
     }
 
     body = {
@@ -89,11 +90,8 @@ def getToken(account):
     return res.text
 
 
-token = getToken('systemAdmin')
 
-print('systemAdmin token :' + token)
-
-tt = create_tenant(token)
+tt = create_tenant("WEB 2f93b8c6-4c67-4a0c-9fd3-83ba545657c9")
 
 token = getToken('TTSHB')
 
