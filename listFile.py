@@ -31,6 +31,7 @@ def print_fIle2(path):
             if '.url' in fullpath:
                 print("rm '" + fullpath + "'")
 
+
 def move_file(path):
     for root, dirs, files in walk(path):
         for f in files:
@@ -38,19 +39,20 @@ def move_file(path):
             # print(fullpath)
             if 'MP3' in fullpath:
                 # print('root===>' + root)
-                new_path =  root.replace('/MP3','')
+                new_path = root.replace('/MP3', '')
                 print(new_path)
                 shutil.move(fullpath, new_path)
 
+
 def delete_file(path):
     for root, dirs, files in walk(path):
-         for f in dirs:
-             fullpath = join(root, f)
-             # print(fullpath)
-             if 'MP3' in dirs:
-                 # print('root===>' + root)
-                 print(fullpath)
-                 shutil.rmtree(fullpath)
+        for f in dirs:
+            fullpath = join(root, f)
+            # print(fullpath)
+            if 'MP3' in dirs:
+                # print('root===>' + root)
+                print(fullpath)
+                shutil.rmtree(fullpath)
 
 
 # 指定要列出所有檔案的目錄
