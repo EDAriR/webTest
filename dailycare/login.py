@@ -11,7 +11,7 @@ headers = {
 }
 
 body = {
-    'account': 'systemAdmin',
+    'loginId': 'systemAdmin',
     'password': '1qaz2wsx',
     'userAgent': 'WEB',
 }
